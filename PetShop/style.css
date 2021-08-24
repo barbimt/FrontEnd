@@ -7,6 +7,10 @@
                     font-family: 'Roboto', sans-serif;
                 }
                 
+                input {
+                    all: unset;
+                }
+                
                 a {
                     text-decoration: none;
                     color: white;
@@ -262,7 +266,7 @@
                     color: #A0A0A0;
                     border-radius: 15px;
                     height: 45px;
-                    padding: 15px;
+                    padding: 10px;
                     margin-right: 15px;
                     padding-right: 140px;
                     border: none;
@@ -273,27 +277,37 @@
                     height: 45px;
                     border: none;
                     border-radius: 15px;
-                    padding: 15px;
+                    padding: 10px;
                     color: white;
                     margin-right: 30px;
                 }
                 
                 .barra-contacto {
-                    background-color: #3c2313;
-                    padding-bottom: 20px;
+                    background-color: #3C2313;
+                    display: grid;
+                    grid-template-columns: 1.1fr 0.8fr;
+                    grid-template-rows: 1fr 1fr 1fr;
+                    gap: 15px 10px;
+                    grid-template-areas: "location location" "phone CatDog2" "message message";
+                    padding: 10px;
                 }
                 
-                footer .location {
-                    display: flex;
-                    align-items: center;
-                    margin-left: 65px;
-                    padding-top: 15px;
+                .location {
+                    grid-area: location;
+                }
+                
+                .phone {
+                    grid-area: phone;
+                }
+                
+                .message {
+                    grid-area: message;
                 }
                 
                 .contacto-text {
                     display: flex;
                     flex-direction: column;
-                    margin-left: 15px;
+                    margin-left: 10px;
                 }
                 
                 .contacto-text h4 {
@@ -305,19 +319,22 @@
                     font-size: 15px;
                 }
                 
-                .barra-contacto>.cat-dog {
+                footer .cat-dog2 {
                     display: flex;
+                    align-items: center;
+                    align-content: stretch;
+                    justify-content: flex-end;
+                    grid-area: CatDog2;
                 }
-                
+                /*
                 footer .cat-dog2 {
                     display: flex;
                     position: absolute;
-                    /* left: 1500px;*/
                     right: 0px;
                     top: 1867px;
                     align-items: center;
                     font-size: 15px;
-                }
+                }*/
                 
                 footer .cat-dog2 h1 {
                     color: white;
@@ -342,8 +359,30 @@
                     .container-cards {
                         flex-direction: column;
                     }
+                    footer>.container-suscribe {
+                        margin-top: 25px;
+                        background-color: #F0A83E;
+                        color: white;
+                        display: flex;
+                        justify-content: space-between;
+                        align-items: center;
+                        padding: 1rem 1.15rem;
+                    }
                     footer .cat-dog2 {
                         top: 2550px;
+                    }
+                    .barra-correo {
+                        align-items: center;
+                    }
+                    .barra-correo>.correo {
+                        height: 20px;
+                        font-size: 10px;
+                        padding: 9px;
+                        padding-right: 131px;
+                    }
+                    .barra-correo>.suscribirme {
+                        height: 20px;
+                        padding: 9px;
                     }
                 }
                 
@@ -356,7 +395,6 @@
                     }
                     .icono-menu {
                         display: block;
-                        /* font-weight: 900*/
                         font-size: 30px
                     }
                     .banner {
@@ -398,6 +436,7 @@
                     .form-button>.enviar {
                         padding-left: 60px;
                         padding-right: 60px;
+                        border: none;
                     }
                     .form-button>.reset {
                         padding-left: 60px;
@@ -406,24 +445,65 @@
                     footer>.container-suscribe {
                         flex-direction: column;
                     }
+                    .barra-correo {
+                        align-items: center
+                    }
                     .barra-correo>.correo {
                         margin: 0 auto;
-                        padding-right: 30px;
+                        padding: 8px;
+                        height: 30px;
+                        font-size: 10px;
+                        padding-right: 60px;
                     }
                     .barra-correo>.suscribirme {
                         margin-left: 15px;
-                        margin-right: 0px
+                        margin-right: 0px;
+                        height: 30px;
+                        padding: 8px;
+                        font-weight: bold;
                     }
                     footer>.container-suscribe {
                         margin-top: 50px
                     }
+                    /*
                     footer .cat-dog2 {
                         justify-content: center;
                         font-size: 10px;
                         position: static;
                         padding-top: 10px
-                    }
+                    }*/
                     .barra-contacto {
-                        padding-bottom: 5px;
+                        grid-template-columns: 1fr;
+                        grid-template-rows: 0.1fr 1fr 1fr 1fr;
+                        gap: 10px 20px;
+                        grid-template-areas: "cat-dog2" "location" "phone" "message";
+                    }
+                    .location {
+                        grid-area: location;
+                        display: flex;
+                        align-items: center;
+                        justify-content: center;
+                        margin-right: 27px;
+                    }
+                    .phone {
+                        grid-area: phone;
+                        display: flex;
+                        align-items: center;
+                        justify-content: center;
+                    }
+                    .message {
+                        grid-area: message;
+                        display: flex;
+                        align-items: center;
+                        justify-content: center;
+                    }
+                    footer .cat-dog2 {
+                        grid-area: cat-dog2;
+                        justify-content: center;
+                        font-size: 10px;
+                        height: fit-content;
+                    }
+                    h1 {
+                        font-weight: 700;
                     }
                 }
