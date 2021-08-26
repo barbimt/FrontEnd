@@ -255,6 +255,7 @@
                 .footer-mensaje>p {
                     margin: 5px;
                     font-weight: 700;
+                    font-size: 20px;
                 }
                 
                 .barra-correo {
@@ -264,20 +265,22 @@
                 .barra-correo>.correo {
                     background-color: white;
                     color: #A0A0A0;
-                    border-radius: 15px;
+                    border-radius: 20px;
                     height: 45px;
-                    padding: 10px;
+                    padding: 5px;
                     margin-right: 15px;
-                    padding-right: 140px;
+                    padding-right: 150px;
                     border: none;
+                    font-size: 10px;
+                    padding-left: 5px;
                 }
                 
                 .barra-correo>.suscribirme {
                     background-color: #3C2313;
                     height: 45px;
                     border: none;
-                    border-radius: 15px;
-                    padding: 10px;
+                    border-radius: 20px;
+                    padding: 5px 10px;
                     color: white;
                     margin-right: 30px;
                 }
@@ -289,7 +292,8 @@
                     grid-template-rows: 1fr 1fr 1fr;
                     gap: 15px 10px;
                     grid-template-areas: "location location" "phone CatDog2" "message message";
-                    padding: 10px;
+                    padding: 15px;
+                    padding-left: 50px;
                 }
                 
                 .location {
@@ -325,6 +329,7 @@
                     align-content: stretch;
                     justify-content: flex-end;
                     grid-area: CatDog2;
+                    padding-right: 20px;
                 }
                 /*
                 footer .cat-dog2 {
@@ -358,6 +363,9 @@
                 @media screen and (max-width: 768px) {
                     .container-cards {
                         flex-direction: column;
+                    }
+                    .footer-mensaje>p {
+                        font-size: 15px;
                     }
                     footer>.container-suscribe {
                         margin-top: 25px;
@@ -477,6 +485,7 @@
                         grid-template-rows: 0.1fr 1fr 1fr 1fr;
                         gap: 10px 20px;
                         grid-template-areas: "cat-dog2" "location" "phone" "message";
+                        justify-items: center;
                     }
                     .location {
                         grid-area: location;
