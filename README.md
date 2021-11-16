@@ -12,3 +12,12 @@ Skills used for this project: HTML, CSS, Flexbox, absolute and relative Position
   * ####  [Live Demo](https://barbimt.github.io/FrontEnd/Heroes)
 <image src="https://user-images.githubusercontent.com/82407633/142039143-91866cd3-6af7-446e-b036-16e11457c265.png"  />
 
+## PizzaFront: Website Responsive
+Skills used for this project: HTML, CSS and Flexbox
+  * ####  [Live Demo](https://barbimt.github.io/FrontEnd/PetShop)
+Desktop | Mobile
+---------|---------
+<image src="https://user-images.githubusercontent.com/82407633/142071375-08964745-5c7e-4ddf-8b38-3963a9520b46.png"  />|<image src="https://user-images.githubusercontent.com/82407633/142071198-d09ad993-b2f4-43dc-9ea1-8a6da060e5b4.gif"  />
+
+
+
