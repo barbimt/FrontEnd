@@ -1,0 +1,221 @@
+@import url("https://fonts.googleapis.com/css2?family=Roboto:wght@400;500;700&display=swap");
+:root {
+  --gray: #222222;
+  --red: #fc200c;
+  --green: #39b24a;
+  --lightWhite: #f3f3f3;
+  --white: #fff;
+}
+
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+html {
+  font-size: 62.5%; /* 16px _____ 100%
+                       10px ____  62.5%*/
+}
+body {
+  background: var(--lightWhite);
+  font-family: "Roboto", sans-serif;
+}
+ul {
+  list-style-type: none;
+  font-size: 14px;
+}
+
+header > .container {
+  background: var(--gray);
+  color: var(--white);
+  padding: 0.5rem 1.25rem;
+  /*Añadimos flex*/
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+header nav {
+  display: flex;
+}
+
+header .hamburguesa {
+  display: none;
+  font-size: 2rem;
+}
+
+header nav ul {
+  /*Añadimos flex*/
+  display: flex;
+  align-items: center;
+}
+
+header nav ul li {
+  margin-left: 13px;
+}
+
+header .header__logo {
+  /*Añadimos flex*/
+  display: flex;
+  align-items: center;
+}
+
+h1 {
+  margin: 5px;
+}
+
+header .header__logo span,
+footer .footer__logo span {
+  color: var(--green);
+}
+
+header .header__logo span:nth-child(2),
+footer .footer__logo span:nth-child(2) {
+  color: var(--red);
+}
+
+main {
+  padding: 35px 0px;
+  /* Alto del main: alto viewport - alto Header - alto Footer 
+       Me aseguro que el main ocupa todo el alto disponible */
+  min-height: calc(100vh - 100px - 150px);
+  display: flex;
+  align-items: center;
+}
+
+main .container {
+  max-width: 1200px;
+  margin: 0 auto;
+  /*Añadimos flex*/
+  display: flex;
+  gap: 10px;
+}
+
+main section .card {
+  border-radius: 5px;
+  height: 350px;
+  width: 490px;
+}
+
+main section .delivery {
+  background-size: cover;
+  background: url("../img/delivery.jpg") no-repeat;
+  color: var(--red);
+  flex-grow: 1;
+  font-size: 1.5rem;
+  font-weight: bold;
+  padding: 20px;
+}
+
+main section .delivery span {
+  color: var(--lightWhite);
+}
+
+main section .podio {
+  background: #fff;
+  font-weight: bold;
+  /*Añadimos flex*/
+  display: flex;
+  flex-direction: column;
+  flex-basis: 490px;
+  justify-content: space-around;
+  flex-grow: 1;
+}
+
+main section .podio h3 {
+  color: var(--red);
+  font-size: 24px;
+  text-align: center;
+  padding: 26px;
+  width: 100%;
+}
+
+.podio .top5 .podio__pizzas h4 {
+  font-size: 20px;
+  font-weight: bold;
+  padding-bottom: 20px;
+}
+
+.top5 {
+  /*Añadimos flex*/
+  display: flex;
+  align-items: center;
+  justify-content: space-evenly;
+}
+
+.top5 .podio__pizzas ol li {
+  padding: 10px 0px;
+  font-size: 14px;
+}
+
+.top5 .podio__img {
+  /*Añadimos flex*/
+  display: flex;
+  align-items: center;
+}
+
+footer {
+  background: #222;
+  padding: 19px 20px;
+  /*Añadimos flex*/
+}
+footer > .container {
+  display: flex;
+  justify-content: space-between;
+}
+footer .footer__logo {
+  color: var(--lightWhite);
+  font-size: 14px;
+  /*Añadimos flex*/
+  display: flex;
+  align-items: center;
+}
+
+footer ul {
+  color: var(--lightWhite);
+  /*Añadimos flex*/
+  display: flex;
+  gap: 10px;
+  flex-direction: column;
+  order: -1;
+}
+
+footer ul li:first-child {
+  order: -2;
+}
+
+footer ul li:last-child {
+  order: -1;
+}
+
+/* Responsive */
+@media screen and (max-width: 768px) {
+  main .container {
+    /* flex-wrap: wrap;*/
+    flex-direction: column;
+  }
+  main section .card {
+    width: 100%;
+  }
+}
+@media screen and (max-width: 480px) {
+  header .hamburguesa {
+    display: block;
+  }
+  header nav ul {
+    display: none;
+  }
+  footer > .container {
+    flex-direction: column;
+  }
+  footer .footer__logo {
+    margin-top: 20px;
+  }
+  main section .podio {
+    justify-content: space-evenly;
+  }
+
+  .top5 .podio__pizzas ol li {
+    font-size: 12px;
+  }
+}
