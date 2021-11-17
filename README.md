@@ -14,7 +14,7 @@ Skills used for this project: HTML, CSS, Flexbox, absolute and relative Position
 
 ## PizzaFront: Website Responsive
 Skills used for this project: HTML, CSS and Flexbox
-  * ####  [Live Demo](https://barbimt.github.io/FrontEnd/PetShop)
+  * ####  [Live Demo](https://barbimt.github.io/FrontEnd/PizzaFront)
 Desktop | Mobile
 ---------|---------
 <image src="https://user-images.githubusercontent.com/82407633/142071375-08964745-5c7e-4ddf-8b38-3963a9520b46.png"  />|<image src="https://user-images.githubusercontent.com/82407633/142071198-d09ad993-b2f4-43dc-9ea1-8a6da060e5b4.gif"  />
